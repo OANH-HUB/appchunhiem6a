@@ -104,10 +104,10 @@ export default function App() {
   const [isImportOpen, setIsImportOpen] = useState(false);
   const [isScoreSettingsOpen, setIsScoreSettingsOpen] = useState(false);
   const [isBulkScoreOpen, setIsBulkScoreOpen] = useState(false);
-  const [isApiSettingsOpen, setIsApiSettingsOpen] = useState(() => !localStorage.getItem('gemini_api_key'));
+  const [isApiSettingsOpen, setIsApiSettingsOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
-  const [currentUserRole, setCurrentUserRole] = useState<'teacher' | 'monitor' | 'student'>('teacher');
+  const [currentUserRole, setCurrentUserRole] = useState<'teacher' | 'monitor' | 'student'>('student');
   const [pendingRoleChange, setPendingRoleChange] = useState<'teacher' | 'monitor' | 'student' | null>(null);
   
   const [pendingProposals, setPendingProposals, isProposalsLoaded] = useFirebaseSync<ScoreProposal[]>('pendingProposals', (() => {

@@ -153,26 +153,30 @@ export const Navbar: React.FC<NavbarProps> = ({
               </button>
             )}
 
-            <button
-              onClick={onOpenApiSettings}
-              className="inline-flex items-center space-x-1 px-3 py-1.5 bg-rose-50 border border-rose-200 rounded-xl text-xs font-bold text-rose-600 hover:bg-rose-100 transition shadow-xs"
-            >
-              <Settings className="w-3.5 h-3.5" />
-              <span className="hidden md:inline">Lấy API key để sử dụng app</span>
-              <span className="md:hidden">API Key</span>
-            </button>
+            {currentUserRole === 'teacher' && (
+              <>
+                <button
+                  onClick={onOpenApiSettings}
+                  className="inline-flex items-center space-x-1 px-3 py-1.5 bg-rose-50 border border-rose-200 rounded-xl text-xs font-bold text-rose-600 hover:bg-rose-100 transition shadow-xs"
+                >
+                  <Settings className="w-3.5 h-3.5" />
+                  <span className="hidden md:inline">Lấy API key để sử dụng app</span>
+                  <span className="md:hidden">API Key</span>
+                </button>
 
-            <button
-              onClick={openAiDrawer}
-              className="relative inline-flex items-center space-x-2 px-3.5 py-1.5 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-xl text-xs sm:text-sm font-semibold shadow-md shadow-indigo-200 hover:shadow-lg transition-all active:scale-95"
-            >
-              <Bot className="w-4 h-4 animate-pulse" />
-              <span>Trợ lý AI Cô Oanh</span>
-              <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-300"></span>
-              </span>
-            </button>
+                <button
+                  onClick={openAiDrawer}
+                  className="relative inline-flex items-center space-x-2 px-3.5 py-1.5 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white rounded-xl text-xs sm:text-sm font-semibold shadow-md shadow-indigo-200 hover:shadow-lg transition-all active:scale-95"
+                >
+                  <Bot className="w-4 h-4 animate-pulse" />
+                  <span>Trợ lý AI Cô Oanh</span>
+                  <span className="flex h-2 w-2 relative">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-300"></span>
+                  </span>
+                </button>
+              </>
+            )}
           </div>
         </div>
 
