@@ -1,0 +1,6 @@
+{
+  "name": "Hệ sinh thái Quản trị Lớp học Số 6A - Cô Bế Thị Oanh",
+  "description": "Trợ lý Số hóa Quản trị Lớp học Thông minh 6A - Trường PTNT TH & THCS Đồng Tâm. Quản trị thi đua nề nếp bằng sơ đồ lớp 45 học sinh, thuật toán trọng số linh hoạt, hộp thư thầm kín và AI sư phạm.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
